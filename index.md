@@ -4,3 +4,13 @@
 
 layout: home
 ---
+{% include ThumbnailHome.html %}
+<br>
+
+# Current Funding Summary
+{% include FinancialStatus.html %}
+
+# (Pre-)Donor List
+
+{% include DonorList.html %}
+

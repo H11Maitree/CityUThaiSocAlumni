@@ -1,0 +1,123 @@
+<style>
+  .thumbnail-home {
+    padding: 56px 20px;
+    border-radius: 18px;
+    background: linear-gradient(135deg, rgba(253, 126, 20, 0.8) 0%, rgba(214, 51, 132, 0.8) 100%);
+    color: #0b1220;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+  }
+
+  .thumbnail-home .motto {
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(6px);
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: 0.2px;
+    margin-bottom: 14px;
+  }
+
+  .thumbnail-home h1 {
+    margin: 0;
+    font-size: clamp(28px, 4vw, 44px);
+    line-height: 1.1;
+    color: #04111d;
+  }
+
+  .thumbnail-home .subtitle {
+    margin: 14px auto 0;
+    max-width: 720px;
+    font-size: 16px;
+    line-height: 1.6;
+    color: rgba(4, 17, 29, 0.9);
+  }
+
+  .thumbnail-home-actions {
+    margin-top: 22px;
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 16px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform 0.08s ease, box-shadow 0.12s ease, background 0.12s ease;
+    user-select: none;
+  }
+
+  .cta:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 10px 18px rgba(0, 0, 0, 0.12);
+  }
+
+  .cta:active {
+    transform: translateY(0px);
+    box-shadow: none;
+  }
+
+  .cta-primary {
+    background: rgba(255, 255, 255, 0.92);
+    color: #cc103c;
+  }
+
+  .cta-primary:visited {
+    color: #cc103c;
+  }
+
+  .cta-primary:hover {
+    background: #ffffff;
+  }
+
+  .cta-secondary {
+    background: rgba(4, 17, 29, 0.2);
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+  }
+
+  .cta-secondary:visited {
+    color: #ffffff;
+  }
+
+  .cta-secondary:hover {
+    background: rgba(4, 17, 29, 0.28);
+  }
+
+  .cta small {
+    font-weight: 600;
+    opacity: 0.85;
+    margin-left: 8px;
+  }
+</style>
+
+<div class="thumbnail-home">
+  <div class="motto">Keep Thai Culture Alive at CityU</div>
+
+  <h1>Alumni Support,</h1>
+  <h1>Student-Led Thai Culture</h1>
+
+  <p class="subtitle">
+    We provide short-term, repayable cash-flow support for Thai cultural activities at CityU —
+    so students don’t need to front the costs while waiting for reimbursement.
+  </p>
+
+  <div class="thumbnail-home-actions">
+    <a class="cta cta-secondary" href="{{ site.baseurl }}/get-support">
+      For Current Students → Get Support
+    </a>
+    <a class="cta cta-primary" href="{{ site.baseurl }}/donate">
+      Dear Lovely Alumni → Donate
+    </a>
+  </div>
+</div>

@@ -1,0 +1,110 @@
+<style>
+  .donor-card {
+    border: 1px solid rgba(0,0,0,0.08);
+    border-radius: 16px;
+    padding: 18px;
+    background: #fff;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+    margin: 10px 0 18px;
+  }
+  .donor-note {
+    font-size: 14px;
+    line-height: 1.6;
+    color: rgba(0,0,0,0.70);
+    margin: 0 0 14px;
+  }
+  .donor-table {
+    width: 100%;
+    border-collapse: collapse;
+    overflow: hidden;
+    border-radius: 12px;
+    border: 1px solid rgba(0,0,0,0.08);
+  }
+  .donor-table th,
+  .donor-table td {
+    padding: 12px 12px;
+    text-align: left;
+    border-bottom: 1px solid rgba(0,0,0,0.06);
+  }
+  .donor-table th {
+    background: rgba(0,0,0,0.04);
+    font-size: 13px;
+    color: rgba(0,0,0,0.65);
+    letter-spacing: 0.2px;
+    font-weight: 800;
+  }
+  .donor-table td {
+    font-size: 14px;
+  }
+  .donor-amount {
+    text-align: right !important;
+    white-space: nowrap;
+    font-weight: 800;
+  }
+  .donor-status {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 800;
+    background: rgba(2,132,199,0.10);
+    border: 1px solid rgba(2,132,199,0.18);
+    color: rgba(2,132,199,1);
+  }
+  .donor-footer {
+    margin-top: 12px;
+    font-size: 13px;
+    color: rgba(0,0,0,0.60);
+    line-height: 1.5;
+  }
+</style>
+
+{% assign currency = "HKD" %}
+
+<div class="donor-card">
+  <p class="donor-note">
+    This is a <strong>pre-donor list</strong>. Pre-donors have pledged support, but funds may not have been transferred yet.
+    We will notify donors before any transfer is arranged (either to the Society after formation, or directly to ThaiSoc for the pilot cash-flow support).
+  </p>
+
+  <table class="donor-table">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Status</th>
+        <th class="donor-amount">Pledged</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Owen</td>
+        <td><span class="donor-status">Pre-Donor</span></td>
+        <td class="donor-amount">{{ currency }} 0</td>
+      </tr>
+      <tr>
+        <td>Maitree</td>
+        <td><span class="donor-status">Pre-Donor</span></td>
+        <td class="donor-amount">{{ currency }} 2,000</td>
+      </tr>
+      <tr>
+        <td>Best</td>
+        <td><span class="donor-status">Pre-Donor</span></td>
+        <td class="donor-amount">{{ currency }} 500</td>
+      </tr>
+      <tr>
+        <td>Phu</td>
+        <td><span class="donor-status">Pre-Donor</span></td>
+        <td class="donor-amount">{{ currency }} 500</td>
+      </tr>
+      <tr>
+        <td>Chottiwatt</td>
+        <td><span class="donor-status">Pre-Donor</span></td>
+        <td class="donor-amount">{{ currency }} 0</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="donor-footer">
+    Want your name listed (or prefer to stay anonymous)? Contact a team member on the Donate page.
+  </div>
+</div>

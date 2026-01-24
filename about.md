@@ -2,6 +2,7 @@
 layout: page
 title: About
 permalink: /about/
+nav-include: true
 ---
 
 **CityU Thai Alumni Society** is an independent alumni initiative formed to support Thai students at City University of Hong Kong. Our purpose is to strengthen connections between alumni and current students while fostering a sustainable and supportive Thai student community.
