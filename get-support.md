@@ -43,7 +43,7 @@ Please send the required documentation to the ThaiSoc President:
 **Phuriyaphan**  
 Email: 
 
-The ThaiSoc President shall review and provide a decision within 14 days. If no decision is made within this period, the request may be submitted directly to us, on the assumption that there is no objection from ThaiSoc.
+The ThaiSoc President shall review and provide a decision within 14 days. If no decision is made within this period, the request may be submitted directly to us by the host, on the assumption that there is no objection from ThaiSoc.
 
 ---
 
