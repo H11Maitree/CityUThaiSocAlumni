@@ -68,7 +68,13 @@
     <tbody>
       {% for donor in site.data.preDoners %}
       <tr>
-        <td>{{ donor.Name }}</td>
+        <td>
+          {% if donor['Profile Link'] %}
+            <a href="{{ donor['Profile Link'] }}" target="_blank">{{ donor.Name }}</a>
+          {% else %}
+            {{ donor.Name }}
+          {% endif %}
+        </td>
         <td>{{ donor['Class Of'] }}</td>
         <td class="donor-amount">{{ donor['Pledged (HKD)'] }} {{ currency }}</td>
       </tr>
