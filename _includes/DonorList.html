@@ -41,16 +41,6 @@
     white-space: nowrap;
     font-weight: 800;
   }
-  .donor-status {
-    display: inline-block;
-    padding: 4px 10px;
-    border-radius: 999px;
-    font-size: 12px;
-    font-weight: 800;
-    background: rgba(2,132,199,0.10);
-    border: 1px solid rgba(2,132,199,0.18);
-    color: rgba(2,132,199,1);
-  }
   .donor-footer {
     margin-top: 12px;
     font-size: 13px;
@@ -71,40 +61,22 @@
     <thead>
       <tr>
         <th>Name</th>
-        <th>Status</th>
+        <th>Class Of</th>
         <th class="donor-amount">Pledged</th>
       </tr>
     </thead>
     <tbody>
+      {% for donor in site.data.preDoners %}
       <tr>
-        <td>Owen</td>
-        <td><span class="donor-status">Pre-Donor</span></td>
-        <td class="donor-amount">{{ currency }} 0</td>
+        <td>{{ donor.Name }}</td>
+        <td>{{ donor['Class Of'] }}</td>
+        <td class="donor-amount">{{ donor['Pledged (HKD)'] }} {{ currency }}</td>
       </tr>
-      <tr>
-        <td>Maitree</td>
-        <td><span class="donor-status">Pre-Donor</span></td>
-        <td class="donor-amount">{{ currency }} 2,000</td>
-      </tr>
-      <tr>
-        <td>Best</td>
-        <td><span class="donor-status">Pre-Donor</span></td>
-        <td class="donor-amount">{{ currency }} 500</td>
-      </tr>
-      <tr>
-        <td>Phu</td>
-        <td><span class="donor-status">Pre-Donor</span></td>
-        <td class="donor-amount">{{ currency }} 500</td>
-      </tr>
-      <tr>
-        <td>Chottiwatt</td>
-        <td><span class="donor-status">Pre-Donor</span></td>
-        <td class="donor-amount">{{ currency }} 0</td>
-      </tr>
+      {% endfor %}
     </tbody>
   </table>
 
   <div class="donor-footer">
-    Want your name listed (or prefer to stay anonymous)? Contact a team member on the Donate page.
+    Join donation and get your name listed (or prefer to stay anonymous)? Contact a team member on the <a href="{{ site.baseurl }}/donate">Donate page</a>.
   </div>
 </div>

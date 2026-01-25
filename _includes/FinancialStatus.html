@@ -20,6 +20,9 @@
     padding: 14px 14px 12px;
     background: rgba(2,132,199,0.06);
     border: 1px solid rgba(2,132,199,0.12);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
   .fin-metric:nth-child(2) {
     background: rgba(245,158,11,0.10);
@@ -41,6 +44,8 @@
     font-weight: 900;
     letter-spacing: 0.3px;
     margin: 0;
+    text-align: right;
+
   }
   .fin-sub {
     margin-top: 12px;
@@ -56,31 +61,34 @@
 </style>
 
 {% assign currency = "HKD" %}
-{% assign total_raised = 5000 %}
-{% assign in_use = 500 %}
+{% assign total_raised = 0 %}
+{% for donor in site.data.preDoners %}
+  {% assign amount = donor['Pledged (HKD)'] | remove: ',' | plus: 0 %}
+  {% assign total_raised = total_raised | plus: amount %}
+{% endfor %}
+{% assign in_use = 0 %}
 {% assign available = total_raised | minus: in_use %}
 
 <div class="fin-card">
   <div class="fin-grid">
     <div class="fin-metric">
       <div class="fin-label">Total Raised (Pledged)</div>
-      <p class="fin-value">{{ currency }} {{ total_raised | number_with_delimiter }}</p>
+      <p class="fin-value">{{ total_raised | number_with_delimiter }} {{ currency }}</p>
     </div>
 
     <div class="fin-metric">
-      <div class="fin-label">Currently Borrowed</div>
-      <p class="fin-value">{{ currency }} {{ in_use | number_with_delimiter }}</p>
+      <div class="fin-label">Currently Borrowed By Thai Student(s) in CityU</div>
+      <p class="fin-value">{{ in_use | number_with_delimiter }} {{ currency }}</p>
     </div>
 
     <div class="fin-metric">
       <div class="fin-label">Cash Available</div>
-      <p class="fin-value">{{ currency }} {{ available | number_with_delimiter }}</p>
+      <p class="fin-value">{{ available | number_with_delimiter }} {{ currency }}</p>
     </div>
   </div>
 
   <div class="fin-sub">
     Note: During the formation stage, “Total Raised” reflects <strong>pre-donation pledges</strong> (promised support).
     Funds may still be held by donors until transfer is arranged.
-    Figures are shown in <code>{{ currency }}</code>.
   </div>
 </div>
