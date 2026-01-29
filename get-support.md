@@ -33,7 +33,7 @@ Important: we provide **cash-flow support only**. The Society **does not reimbur
 Please provide:
 
 - Event **proposal** (you may reuse the version submitted to CityU)
-- Proof of **reimbursement/funding credit approval** from CityU (email or document)
+- Proof of approved **reimbursement/funding credit arrangement** from CityU (email or document)
 - Requested amount
 - Expected reimbursement timeline
 

@@ -101,7 +101,7 @@ The Society may support a request only if:
 
 1. the activity is a **Supported Event** (CityU-recognised and hosted by current students / recognised student groups); and
 2. the request relates only to **Reimbursable Expenses**; and
-3. the organiser provides **written confirmation** of reimbursement/funding credit approval from an official CityU unit.
+3. the organiser provides **written confirmation** of approved reimbursement/funding credit arrangement from an official CityU unit.
 
 ### 9.2 Form of support (cash-flow only)
 1. Support is provided only as **interest-free, repayable cash-flow support** (an advance).
