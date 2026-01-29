@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Open Letter to the ThaiSoc Cabinet 25/26"
-date: 2026-01-30
+date: 2026-01-29
 categories: letter
 ---
 
