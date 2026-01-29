@@ -10,7 +10,7 @@ layout: home
 # Current Funding Summary
 {% include FinancialStatus.html %}
 
-# (Pre-)Donor List
+# (Pre-)Contributor List
 
-{% include DonorList.html %}
+{% include ContributorList.html %}
 

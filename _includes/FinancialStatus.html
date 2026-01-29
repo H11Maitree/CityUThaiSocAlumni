@@ -62,8 +62,8 @@
 
 {% assign currency = "HKD" %}
 {% assign total_raised = 0 %}
-{% for donor in site.data.preDoners %}
-  {% assign amount = donor['Pledged (HKD)'] | remove: ',' | plus: 0 %}
+{% for contributor in site.data.preContributors %}
+  {% assign amount = contributor['Pledged (HKD)'] | remove: ',' | plus: 0 %}
   {% assign total_raised = total_raised | plus: amount %}
 {% endfor %}
 {% assign in_use = 0 %}
@@ -72,23 +72,24 @@
 <div class="fin-card">
   <div class="fin-grid">
     <div class="fin-metric">
-      <div class="fin-label">Total Raised (Pledged)</div>
+      <div class="fin-label">Total Committed (Pre‑contributions)</div>
       <p class="fin-value">{{ total_raised | number_with_delimiter }} {{ currency }}</p>
     </div>
 
     <div class="fin-metric">
-      <div class="fin-label">Currently Borrowed By Thai Student(s) in CityU</div>
+      <div class="fin-label">Cash‑flow support outstanding (reimbursable)</div>
       <p class="fin-value">{{ in_use | number_with_delimiter }} {{ currency }}</p>
     </div>
 
     <div class="fin-metric">
-      <div class="fin-label">Cash Available</div>
+      <div class="fin-label">Available for cash-flow support</div>
       <p class="fin-value">{{ available | number_with_delimiter }} {{ currency }}</p>
     </div>
   </div>
 
   <div class="fin-sub">
-    Note: During the formation stage, “Total Raised” reflects <strong>pre-donation pledges</strong> (promised support).
-    Funds may still be held by donors until transfer is arranged.
+    Note: During the formation stage, “Total Committed” reflects <strong>pre‑contribution commitments</strong> (promised support).
+    Funds may still be held by contributors until a transfer is arranged.
   </div>
+  <div class="fin-sub">Any cash-flow support (if shown above) is interest-free and provided only for <strong>CityU-recognised events</strong> that have <strong>written reimbursement/funding approval</strong>.</div>
 </div>

@@ -53,8 +53,8 @@
 
 <div class="donor-card">
   <p class="donor-note">
-    This is a <strong>pre-donor list</strong>. Pre-donors have pledged support, but funds may not have been transferred yet.
-    We will notify donors before any transfer is arranged (either to the Society after formation, or directly to ThaiSoc for the pilot cash-flow support).
+    This is a <strong>pre-contributor list</strong>. Contributors have made a contribution commitment, but funds may not have been transferred yet.
+    We will contact contributors before any transfer is arranged. Transfers (if any) are used only to provide repayable cash-flow support for documented, reimbursable expenses for <strong>CityU-recognised Thai cultural events</strong> hosted by current students.
   </p>
 
   <table class="donor-table">
@@ -62,27 +62,32 @@
       <tr>
         <th>Name</th>
         <th>Class Of</th>
-        <th class="donor-amount">Pledged</th>
+        <th class="donor-amount">Committed</th>
       </tr>
     </thead>
     <tbody>
-      {% for donor in site.data.preDoners %}
+      {% for contributor in site.data.preContributors %}
       <tr>
         <td>
-          {% if donor['Profile Link'] %}
-            <a href="{{ donor['Profile Link'] }}" target="_blank">{{ donor.Name }}</a>
+          {% if contributor['Profile Link'] %}
+            <a href="{{ contributor['Profile Link'] }}" target="_blank">{{ contributor.Name }}</a>
           {% else %}
-            {{ donor.Name }}
+            {{ contributor.Name }}
           {% endif %}
         </td>
-        <td>{{ donor['Class Of'] }}</td>
-        <td class="donor-amount">{{ donor['Pledged (HKD)'] }} {{ currency }}</td>
+        <td>{{ contributor['Class Of'] }}</td>
+        <td class="donor-amount">{{ contributor['Pledged (HKD)'] }} {{ currency }}</td>
       </tr>
       {% endfor %}
     </tbody>
   </table>
 
   <div class="donor-footer">
-    Join donation and get your name listed (or prefer to stay anonymous)? Contact a team member on the <a href="{{ site.baseurl }}/donate">Donate page</a>.
+    Want to be listed (or stay anonymous)? See <a href="{{ site.baseurl }}/contribute">Contribute</a> to learn how to make a contribution commitment.
   </div>
+
+  <div class="donor-footer">
+    Note: A “contribution commitment” here is <strong>not a donation</strong> and does not provide any profit, interest, or benefit in return.
+  </div>
+
 </div>

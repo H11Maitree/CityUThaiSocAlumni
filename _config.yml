@@ -21,7 +21,7 @@
 title: CityU Thai Alumni Society (In Formation)
 email: Matt.H@my.CityU.edu.hk
 description: >- # this means to ignore newlines until "baseurl:"
-  CityU Thai Alumni Society (In Formation) is an independent community connecting Thai alumni and students at City University of Hong Kong to support and strengthen the Thai student network. It is not officially affiliated with or endorsed by the university.
+  CityU Thai Alumni Society (In Formation) is an independent alumni-led community supporting Thai students at CityU. It is not affiliated with or endorsed by the University.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 # twitter_username: jekyllrb
@@ -56,4 +56,4 @@ header_pages:
   - about.md
   - constitution.md
   - get-support.md
-  - donate.md
+  - contribute.md
